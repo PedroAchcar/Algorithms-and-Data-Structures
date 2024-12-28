@@ -68,20 +68,10 @@ def build_tree(K, i, j):
 
 def main(f, f_):
     F, C, K = optimal_tree(f, f_)
-    print('----- F Matrix -----')
-    print(F)
-    print('\n----- C Matrix -----')
-    print(C)
-    print('\n----- K Matrix -----')
-    print(np.matrix(K))  # Transform to np.array to print with numpy formatting
+    tree = build_tree(K, 0, len(K) - 1)
 
     # Build the tree
-    root = build_tree(K, 0, len(K) - 1)
-
-    # Print the tree
-    # print_tree(root)
-    print('\n----- Optimal Binary Search Tree -----')
-    print_btree(root)
+    return tree, F, C, K
 
 
 if __name__ == "__main__":
@@ -89,4 +79,15 @@ if __name__ == "__main__":
     f = [0, 5, 4, 7, 8, 3, 0]
     f_ = [6, 0, 3, 8, 7, 4, 5]
 
-    main(f, f_)
+    root, F, C, K = main(f, f_)
+
+    print('----- F Matrix -----')
+    print(F)
+    print('\n----- C Matrix -----')
+    print(C)
+    print('\n----- K Matrix -----')
+    print(np.matrix(K))  # Transform to np.array to print with numpy formatting
+
+    # Print the tree
+    print('\n----- Optimal Binary Search Tree -----')
+    print_btree(root)
