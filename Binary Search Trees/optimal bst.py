@@ -66,25 +66,23 @@ def build_tree(K, i, j):
 #         print_tree(root.right, level + 1, "R--- ")
 
 
-# Usage exemple
-f = [0, 10, 20, 30, 40, 50, 60, 70, 80]
-f_ = [10, 10, 10, 10, 10, 10, 10, 10, 10]
+if __name__ == "__main__":
+    # Usage exemple
+    f = [0, 5, 4, 7, 8, 3, 0]
+    f_ = [6, 0, 3, 8, 7, 4, 5]
 
+    F, C, K = optimal_tree(f, f_)
+    print('----- F Matrix -----')
+    print(F)
+    print('\n----- C Matrix -----')
+    print(C)
+    print('\n----- K Matrix -----')
+    print(np.matrix(K))  # Transform to np.array to print with numpy formatting
 
-F, C, K = optimal_tree(f, f_)
-print('----- F Matrix -----')
-print(F)
-print('\n----- C Matrix -----')
-print(C)
-print('\n----- K Matrix -----')
-print(np.matrix(K))  # Transform to np.array to print with numpy formatting
+    # Build the tree
+    root = build_tree(K, 0, len(K) - 1)
 
-
-# Build the tree
-root = build_tree(K, 0, len(K) - 1)
-
-
-# Print the tree
-# print_tree(root)
-print('\n----- Optimal Binary Search Tree -----')
-print_btree(root)
+    # Print the tree
+    # print_tree(root)
+    print('\n----- Optimal Binary Search Tree -----')
+    print_btree(root)
