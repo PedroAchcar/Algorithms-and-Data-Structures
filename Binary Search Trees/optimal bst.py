@@ -66,11 +66,7 @@ def build_tree(K, i, j):
 #         print_tree(root.right, level + 1, "R--- ")
 
 
-if __name__ == "__main__":
-    # Usage exemple
-    f = [0, 5, 4, 7, 8, 3, 0]
-    f_ = [6, 0, 3, 8, 7, 4, 5]
-
+def main(f, f_):
     F, C, K = optimal_tree(f, f_)
     print('----- F Matrix -----')
     print(F)
@@ -86,3 +82,11 @@ if __name__ == "__main__":
     # print_tree(root)
     print('\n----- Optimal Binary Search Tree -----')
     print_btree(root)
+
+
+if __name__ == "__main__":
+    # Usage exemple
+    f = [0, 5, 4, 7, 8, 3, 0]
+    f_ = [6, 0, 3, 8, 7, 4, 5]
+
+    main(f, f_)
