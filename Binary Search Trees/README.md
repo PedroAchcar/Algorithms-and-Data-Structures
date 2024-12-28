@@ -24,17 +24,18 @@ An Optimal Binary Search Tree (OBST) reduces the cost of searching keys by lever
 ## Usage Example
 
 1. Define Input Frequencies at line 71 and 72:
+```
 f  = [0, 5, 4, 7, 8, 3, 0]
 f_ = [6, 0, 3, 8, 7, 4, 5]
-
-2. Generate OBST Matrices and Construct and Visualize the Tree running the file.
+```
+3. Generate OBST Matrices and Construct and Visualize the Tree running the file.
 
 ## Output
 
 1. As output you will have the three matrices (frequency, cost and root) and the OBST:
 
 - For the Usage Example above:
-
+```
 ----- F Matrix -----
 [[ 6. 11. 18. 33. 48. 55. 60.]
  [ 0.  0.  7. 22. 37. 44. 49.]
@@ -73,3 +74,4 @@ R0    __2__              R5  R6
       |   |
      R1  R2
 
+```
