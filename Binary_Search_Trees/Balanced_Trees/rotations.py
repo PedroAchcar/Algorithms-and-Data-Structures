@@ -1,7 +1,7 @@
 def right_rotation(p):
-    u = p.right
-    p.right = u.left
-    u.left = p
+    u = p.left
+    p.left = u.right
+    u.right = p
     return u
 
 
@@ -43,10 +43,10 @@ if __name__ == "__main__":
 
     print("---------- Simple Right Rotation ----------")
     root = Node("p")
-    root.left = Node("T1")
-    root.right = Node("u")
-    root.right.left = Node("T2")
-    root.right.right = Node("T3")
+    root.left = Node("u")
+    root.right = Node("T3")
+    root.left.left = Node("T1")
+    root.left.right = Node("T2")
 
     print_btree(root)
     balanced = right_rotation(root)
