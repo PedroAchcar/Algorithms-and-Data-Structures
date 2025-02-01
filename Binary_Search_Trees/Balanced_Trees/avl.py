@@ -99,16 +99,6 @@ def bst_to_avl(root: Node) -> Node:
 if __name__ == "__main__":
     from print_btree import print_btree
 
-    # root = Node('A')
-    # root.left = Node('B')
-    # root.left.left = Node('C')
-    # root.left.right = Node('D')
-    # root.left.left.left = Node('E')
-    # root.left.left.left.right = Node('F')
-    # root.left.left.left.left = Node('G')
-    # root.left.left.left.right.right = Node('H')
-    # root.right = Node('I')
-
     root = Node(4)
     root.left = Node(3)
     root.left.left = Node(1)
