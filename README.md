@@ -8,5 +8,6 @@ This repository contains implementations of algorithms and data structures, orga
   - [Insertion Sort]
   - [Heap Sort]
 - [Binary Search Trees]
+  - [Balanced Trees]
 
 For detailed information about each category, navigate to the respective directory.
