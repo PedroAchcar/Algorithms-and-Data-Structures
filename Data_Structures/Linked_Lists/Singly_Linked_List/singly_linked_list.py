@@ -4,7 +4,7 @@ class Node:
         self.next = None
 
 
-class LinkedList:
+class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
@@ -148,41 +148,41 @@ class LinkedList:
 
 
 if __name__ == "__main__":
-    linked_list = LinkedList()
-    linked_list.print_list()
-    linked_list.remove_at_start()
-    linked_list.remove_at_position(3)
-    linked_list.remove_at_end()
-    print(linked_list.search(2)[0], linked_list.search(2)[1])
+    singly_linked_list = SinglyLinkedList()
+    singly_linked_list.print_list()
+    singly_linked_list.remove_at_start()
+    singly_linked_list.remove_at_position(3)
+    singly_linked_list.remove_at_end()
+    print(singly_linked_list.search(2)[0], singly_linked_list.search(2)[1])
 
-    linked_list.insert_at_end(2)
-    linked_list.insert_at_end(4)
-    linked_list.insert_at_end(5)
+    singly_linked_list.insert_at_end(2)
+    singly_linked_list.insert_at_end(4)
+    singly_linked_list.insert_at_end(5)
 
-    linked_list.print_list()
+    singly_linked_list.print_list()
 
-    linked_list.insert_at_start(1)
+    singly_linked_list.insert_at_start(1)
 
-    linked_list.print_list()
+    singly_linked_list.print_list()
 
-    linked_list.insert_at_position(3, 2)
-    linked_list.insert_at_position(0, 0)
+    singly_linked_list.insert_at_position(3, 2)
+    singly_linked_list.insert_at_position(0, 0)
 
-    linked_list.print_list()
+    singly_linked_list.print_list()
 
-    print(linked_list.search(0)[0], linked_list.search(0)[1])
-    print(linked_list.search(3)[0], linked_list.search(3)[1])
-    print(linked_list.search(7)[0], linked_list.search(7)[1])
+    print(singly_linked_list.search(0)[0], singly_linked_list.search(0)[1])
+    print(singly_linked_list.search(3)[0], singly_linked_list.search(3)[1])
+    print(singly_linked_list.search(7)[0], singly_linked_list.search(7)[1])
 
-    linked_list.remove_at_start()
-    linked_list.remove_at_end()
+    singly_linked_list.remove_at_start()
+    singly_linked_list.remove_at_end()
 
-    linked_list.print_list()
+    singly_linked_list.print_list()
 
-    linked_list.remove_at_position(1)
+    singly_linked_list.remove_at_position(1)
 
-    linked_list.print_list()
+    singly_linked_list.print_list()
 
-    linked_list.remove_at_position(9)
+    singly_linked_list.remove_at_position(9)
 
-    linked_list.print_list()
+    singly_linked_list.print_list()
