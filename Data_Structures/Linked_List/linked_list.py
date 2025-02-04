@@ -128,6 +128,24 @@ class LinkedList:
 
             print("None")
 
+    def search(self, item) -> tuple[bool, int]:
+        """Searchs an item in the linked list.
+        If the linked list has two copies of the item, just the first one will be returned."""
+
+        if self.head is not None:
+
+            current = self.head
+            index = 0
+
+            while current:
+                if current.data == item:
+                    return True, index
+
+                current = current.next
+                index += 1
+
+        return False, -1
+
 
 if __name__ == "__main__":
     lista = LinkedList()
@@ -135,6 +153,7 @@ if __name__ == "__main__":
     lista.remove_at_start()
     lista.remove_at_position(3)
     lista.remove_at_end()
+    print(lista.search(2)[0], lista.search(2)[1])
 
     lista.insert_at_end(2)
     lista.insert_at_end(4)
@@ -151,12 +170,19 @@ if __name__ == "__main__":
 
     lista.print_list()
 
+    print(lista.search(0)[0], lista.search(0)[1])
+    print(lista.search(3)[0], lista.search(3)[1])
+    print(lista.search(7)[0], lista.search(7)[1])
+
     lista.remove_at_start()
     lista.remove_at_end()
 
     lista.print_list()
 
     lista.remove_at_position(1)
+
+    lista.print_list()
+
     lista.remove_at_position(9)
 
     lista.print_list()
