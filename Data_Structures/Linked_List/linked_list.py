@@ -148,41 +148,41 @@ class LinkedList:
 
 
 if __name__ == "__main__":
-    lista = LinkedList()
-    lista.print_list()
-    lista.remove_at_start()
-    lista.remove_at_position(3)
-    lista.remove_at_end()
-    print(lista.search(2)[0], lista.search(2)[1])
+    linked_list = LinkedList()
+    linked_list.print_list()
+    linked_list.remove_at_start()
+    linked_list.remove_at_position(3)
+    linked_list.remove_at_end()
+    print(linked_list.search(2)[0], linked_list.search(2)[1])
 
-    lista.insert_at_end(2)
-    lista.insert_at_end(4)
-    lista.insert_at_end(5)
+    linked_list.insert_at_end(2)
+    linked_list.insert_at_end(4)
+    linked_list.insert_at_end(5)
 
-    lista.print_list()
+    linked_list.print_list()
 
-    lista.insert_at_start(1)
+    linked_list.insert_at_start(1)
 
-    lista.print_list()
+    linked_list.print_list()
 
-    lista.insert_at_position(3, 2)
-    lista.insert_at_position(0, 0)
+    linked_list.insert_at_position(3, 2)
+    linked_list.insert_at_position(0, 0)
 
-    lista.print_list()
+    linked_list.print_list()
 
-    print(lista.search(0)[0], lista.search(0)[1])
-    print(lista.search(3)[0], lista.search(3)[1])
-    print(lista.search(7)[0], lista.search(7)[1])
+    print(linked_list.search(0)[0], linked_list.search(0)[1])
+    print(linked_list.search(3)[0], linked_list.search(3)[1])
+    print(linked_list.search(7)[0], linked_list.search(7)[1])
 
-    lista.remove_at_start()
-    lista.remove_at_end()
+    linked_list.remove_at_start()
+    linked_list.remove_at_end()
 
-    lista.print_list()
+    linked_list.print_list()
 
-    lista.remove_at_position(1)
+    linked_list.remove_at_position(1)
 
-    lista.print_list()
+    linked_list.print_list()
 
-    lista.remove_at_position(9)
+    linked_list.remove_at_position(9)
 
-    lista.print_list()
+    linked_list.print_list()
