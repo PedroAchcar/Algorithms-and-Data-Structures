@@ -53,12 +53,65 @@ class LinkedList:
             self.head = Node(data)
 
         else:
-            aux = self.head
+            current = self.head
 
-            while aux.next:
-                aux = aux.next
+            while current.next:
+                current = current.next
 
-            aux.next = Node(data)
+            current.next = Node(data)
+
+    def remove_at_start(self):
+        """Removes a node at the beginning of the linked list."""
+
+        if self.head is None:
+            print("The linked list is empty.")
+
+        else:
+            self.head = self.head.next
+
+    def remove_at_position(self, position: int):
+        """Removes a node at a specific position in the linked list. 
+        If the position is greater than the length of the linked list, 
+        an error message will be displayed."""
+
+        if self.head is None:
+            print("The linked list is empty.")
+            return
+
+        if position == 0:
+            self.remove_at_start()
+            return
+
+        previous = None
+        current = self.head
+        index = 0
+
+        while index < position and current is not None:
+            previous = current
+            current = current.next
+            index += 1
+
+        if current is None:
+            print("Index error: out of range of the linked list.")
+            return
+
+        previous.next = current.next
+
+    def remove_at_end(self):
+        """Removes a node at the end of the linked list."""
+
+        if self.head is None:
+            print("The linked list is empty.")
+
+        else:
+            previous = None
+            current = self.head
+
+            while current.next is not None:
+                previous = current
+                current = current.next
+
+            previous.next = None
 
     def print_list(self):
         """Prints the linked list node by node."""
@@ -68,26 +121,42 @@ class LinkedList:
 
         else:
             current = self.head
+
             while current:
                 print(current.data, "-> ", end='')
                 current = current.next
+
             print("None")
 
 
-lista = LinkedList()
-lista.print_list()
+if __name__ == "__main__":
+    lista = LinkedList()
+    lista.print_list()
+    lista.remove_at_start()
+    lista.remove_at_position(3)
+    lista.remove_at_end()
 
-lista.insert_at_end(2)
-lista.insert_at_end(4)
-lista.insert_at_end(5)
+    lista.insert_at_end(2)
+    lista.insert_at_end(4)
+    lista.insert_at_end(5)
 
-lista.print_list()
+    lista.print_list()
 
-lista.insert_at_start(1)
+    lista.insert_at_start(1)
 
-lista.print_list()
+    lista.print_list()
 
-lista.insert_at_position(0, 0)
-lista.insert_at_position(3, 2)
+    lista.insert_at_position(3, 2)
+    lista.insert_at_position(0, 0)
 
-lista.print_list()
+    lista.print_list()
+
+    lista.remove_at_start()
+    lista.remove_at_end()
+
+    lista.print_list()
+
+    lista.remove_at_position(1)
+    lista.remove_at_position(9)
+
+    lista.print_list()
