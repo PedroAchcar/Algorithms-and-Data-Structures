@@ -10,6 +10,18 @@ class DoublyLinkedList:
         self.head = None
         self.tail = None
 
+    def lenght(self):
+        """Returns the number of nodes in the linked list."""
+
+        current = self.head
+        index = 0
+
+        while current is not None:
+            current = current.next
+            index += 1
+
+        return index
+
     def insert_at_start(self, data):
         """Inserts a node at the beginning of the linked list."""
 
@@ -191,35 +203,38 @@ if __name__ == "__main__":
     dll.insert_at_start(30)
     dll.insert_at_start(20)
     dll.insert_at_start(10)
-    dll.print_from_head_to_tail()  # Expected: None <-> 10 <-> 20 <-> 30 <-> None
+    dll.print_from_head_to_tail()
+    # Expected: None <-> 10 <-> 20 <-> 30 <-> None
 
     print("\n🔹 Test 2: Insert at the end")
     dll.insert_at_end(40)
     dll.insert_at_end(50)
-    # Expected: None <-> 10 <-> 20 <-> 30 <-> 40 <-> 50 <-> None
     dll.print_from_head_to_tail()
+    # Expected: None <-> 10 <-> 20 <-> 30 <-> 40 <-> 50 <-> None
 
     print("\n🔹 Test 3: Insert at position (index 2)")
     dll.insert_at_position(25, 2)
-    # Expected: None <-> 10 <-> 20 <-> 25 <-> 30 <-> 40 <-> 50 <-> None
     dll.print_from_head_to_tail()
+    # Expected: None <-> 10 <-> 20 <-> 25 <-> 30 <-> 40 <-> 50 <-> None
 
     print("\n🔹 Test 4: Print in reverse order (tail -> head)")
-    # Expected: None <-> 50 <-> 40 <-> 30 <-> 25 <-> 20 <-> 10 <-> None
     dll.print_from_tail_to_head()
+    # Expected: None <-> 50 <-> 40 <-> 30 <-> 25 <-> 20 <-> 10 <-> None
 
     print("\n🔹 Test 5: Remove from the beginning")
     dll.remove_at_start()
-    # Expected: None <-> 20 <-> 25 <-> 30 <-> 40 <-> 50 <-> None
     dll.print_from_head_to_tail()
+    # Expected: None <-> 20 <-> 25 <-> 30 <-> 40 <-> 50 <-> None
 
     print("\n🔹 Test 6: Remove from the end")
     dll.remove_at_end()
-    dll.print_from_head_to_tail()  # Expected: None <-> 20 <-> 25 <-> 30 <-> 40 <-> None
+    dll.print_from_head_to_tail()
+    # Expected: None <-> 20 <-> 25 <-> 30 <-> 40 <-> None
 
     print("\n🔹 Test 7: Remove from position (index 2)")
     dll.remove_at_position(2)
-    dll.print_from_head_to_tail()  # Expected: None <-> 20 <-> 25 <-> 40 <-> None
+    dll.print_from_head_to_tail()
+    # Expected: None <-> 20 <-> 25 <-> 40 <-> None
 
     print("\n🔹 Test 8: Search for an existing element (25)")
     found, position = dll.search(25)
@@ -230,18 +245,23 @@ if __name__ == "__main__":
     print("\n🔹 Test 9: Search for a non-existing element (100)")
     found, position = dll.search(100)
     print(f"Element 100 {
-        'found' if found else 'not found'} at position {position}")
+          'found' if found else 'not found'} at position {position}")
     # Expected: Element 100 not found at position -1
 
     print("\n🔹 Test 10: Remove from an out-of-range position (index 10)")
-    # Expected: "Index error: out of range of the linked list."
     dll.remove_at_position(10)
+    # Expected: "Index error: out of range of the linked list."
+
+    print("\n🔹 Test 11: Number of nodes")
+    print(dll.lenght())
+    # Expected: 3
 
     print("\n🔹 Test 11: Remove all elements until the list is empty")
     dll.remove_at_start()
     dll.remove_at_start()
     dll.remove_at_start()
-    dll.print_from_head_to_tail()  # Expected: The linked list is empty.
+    dll.print_from_head_to_tail()
+    # Expected: The linked list is empty.
 
     print("\n🔹 Test 12: Search in an empty list")
     found, position = dll.search(30)
