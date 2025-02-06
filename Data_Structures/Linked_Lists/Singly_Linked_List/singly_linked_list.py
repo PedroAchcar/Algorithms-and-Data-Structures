@@ -148,41 +148,60 @@ class SinglyLinkedList:
 
 
 if __name__ == "__main__":
-    singly_linked_list = SinglyLinkedList()
-    singly_linked_list.print_list()
-    singly_linked_list.remove_at_start()
-    singly_linked_list.remove_at_position(3)
-    singly_linked_list.remove_at_end()
-    print(singly_linked_list.search(2)[0], singly_linked_list.search(2)[1])
 
-    singly_linked_list.insert_at_end(2)
-    singly_linked_list.insert_at_end(4)
-    singly_linked_list.insert_at_end(5)
+    sll = SinglyLinkedList()
 
-    singly_linked_list.print_list()
+    print("\n🔹 Test 1: Insert at the beginning")
+    sll.insert_at_start(30)
+    sll.insert_at_start(20)
+    sll.insert_at_start(10)
+    sll.print_list()  # Expected: 10 -> 20 -> 30 -> None
 
-    singly_linked_list.insert_at_start(1)
+    print("\n🔹 Test 2: Insert at the end")
+    sll.insert_at_end(40)
+    sll.insert_at_end(50)
+    sll.print_list()  # Expected: 10 -> 20 -> 30 -> 40 -> 50 -> None
 
-    singly_linked_list.print_list()
+    print("\n🔹 Test 3: Insert at position (index 2)")
+    sll.insert_at_position(25, 2)
+    sll.print_list()  # Expected: 10 -> 20 -> 25 -> 30 -> 40 -> 50 -> None
 
-    singly_linked_list.insert_at_position(3, 2)
-    singly_linked_list.insert_at_position(0, 0)
+    print("\n🔹 Test 4: Remove from the beginning")
+    sll.remove_at_start()
+    sll.print_list()  # Expected: 20 -> 25 -> 30 -> 40 -> 50 -> None
 
-    singly_linked_list.print_list()
+    print("\n🔹 Test 5: Remove from the end")
+    sll.remove_at_end()
+    sll.print_list()  # Expected: 20 -> 25 -> 30 -> 40 -> None
 
-    print(singly_linked_list.search(0)[0], singly_linked_list.search(0)[1])
-    print(singly_linked_list.search(3)[0], singly_linked_list.search(3)[1])
-    print(singly_linked_list.search(7)[0], singly_linked_list.search(7)[1])
+    print("\n🔹 Test 6: Remove from position (index 2)")
+    sll.remove_at_position(2)
+    sll.print_list()  # Expected: 20 -> 25 -> 40 -> None
 
-    singly_linked_list.remove_at_start()
-    singly_linked_list.remove_at_end()
+    print("\n🔹 Test 7: Search for an existing element (25)")
+    found, position = sll.search(25)
+    print(f"Element 25 {
+          'found' if found else 'not found'} at position {position}")
+    # Expected: Element 25 found at position 1
 
-    singly_linked_list.print_list()
+    print("\n🔹 Test 8: Search for a non-existing element (100)")
+    found, position = sll.search(100)
+    print(f"Element 100 {
+          'found' if found else 'not found'} at position {position}")
+    # Expected: Element 100 not found at position -1
 
-    singly_linked_list.remove_at_position(1)
+    print("\n🔹 Test 9: Remove from an out-of-range position (index 10)")
+    # Expected: "Index error: out of range of the linked list."
+    sll.remove_at_position(10)
 
-    singly_linked_list.print_list()
+    print("\n🔹 Test 10: Remove all elements until the list is empty")
+    sll.remove_at_start()
+    sll.remove_at_start()
+    sll.remove_at_start()
+    sll.print_list()  # Expected: The linked list is empty.
 
-    singly_linked_list.remove_at_position(9)
-
-    singly_linked_list.print_list()
+    print("\n🔹 Test 11: Search in an empty list")
+    found, position = sll.search(30)
+    print(f"Element 30 {
+          'found' if found else 'not found'} at position {position}")
+    # Expected: Element 30 not found at position -1
