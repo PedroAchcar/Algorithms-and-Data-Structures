@@ -8,6 +8,18 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
+    def lenght(self):
+        """Returns the number of nodes in the linked list."""
+
+        current = self.head
+        index = 0
+
+        while current is not None:
+            current = current.next
+            index += 1
+
+        return index
+
     def insert_at_start(self, data):
         """Inserts a node at the beginning of the linked list."""
 
@@ -155,28 +167,34 @@ if __name__ == "__main__":
     sll.insert_at_start(30)
     sll.insert_at_start(20)
     sll.insert_at_start(10)
-    sll.print_list()  # Expected: 10 -> 20 -> 30 -> None
+    sll.print_list()
+    # Expected: 10 -> 20 -> 30 -> None
 
     print("\n🔹 Test 2: Insert at the end")
     sll.insert_at_end(40)
     sll.insert_at_end(50)
-    sll.print_list()  # Expected: 10 -> 20 -> 30 -> 40 -> 50 -> None
+    sll.print_list()
+    # Expected: 10 -> 20 -> 30 -> 40 -> 50 -> None
 
     print("\n🔹 Test 3: Insert at position (index 2)")
     sll.insert_at_position(25, 2)
-    sll.print_list()  # Expected: 10 -> 20 -> 25 -> 30 -> 40 -> 50 -> None
+    sll.print_list()
+    # Expected: 10 -> 20 -> 25 -> 30 -> 40 -> 50 -> None
 
     print("\n🔹 Test 4: Remove from the beginning")
     sll.remove_at_start()
-    sll.print_list()  # Expected: 20 -> 25 -> 30 -> 40 -> 50 -> None
+    sll.print_list()
+    # Expected: 20 -> 25 -> 30 -> 40 -> 50 -> None
 
     print("\n🔹 Test 5: Remove from the end")
     sll.remove_at_end()
-    sll.print_list()  # Expected: 20 -> 25 -> 30 -> 40 -> None
+    sll.print_list()
+    # Expected: 20 -> 25 -> 30 -> 40 -> None
 
     print("\n🔹 Test 6: Remove from position (index 2)")
     sll.remove_at_position(2)
-    sll.print_list()  # Expected: 20 -> 25 -> 40 -> None
+    sll.print_list()
+    # Expected: 20 -> 25 -> 40 -> None
 
     print("\n🔹 Test 7: Search for an existing element (25)")
     found, position = sll.search(25)
@@ -191,16 +209,21 @@ if __name__ == "__main__":
     # Expected: Element 100 not found at position -1
 
     print("\n🔹 Test 9: Remove from an out-of-range position (index 10)")
-    # Expected: "Index error: out of range of the linked list."
     sll.remove_at_position(10)
+    # Expected: "Index error: out of range of the linked list."
 
-    print("\n🔹 Test 10: Remove all elements until the list is empty")
-    sll.remove_at_start()
-    sll.remove_at_start()
-    sll.remove_at_start()
-    sll.print_list()  # Expected: The linked list is empty.
+    print("\n🔹 Test 10: Number of nodes")
+    print(sll.lenght())
+    # Expected: 3
 
-    print("\n🔹 Test 11: Search in an empty list")
+    print("\n🔹 Test 11: Remove all elements until the list is empty")
+    sll.remove_at_start()
+    sll.remove_at_start()
+    sll.remove_at_start()
+    sll.print_list()
+    # Expected: The linked list is empty.
+
+    print("\n🔹 Test 12: Search in an empty list")
     found, position = sll.search(30)
     print(f"Element 30 {
           'found' if found else 'not found'} at position {position}")
