@@ -102,15 +102,14 @@ class DoublyLinkedList:
             current = current.next
             index += 1
 
-        if current is None:  # Posição inválida
+        if current is None:
             print("Index error: out of range of the linked list.")
             return
 
-        if current == self.tail:  # Se for o último nó, chama remove_at_end()
+        if current == self.tail:
             self.remove_at_end()
             return
 
-        # Atualiza os ponteiros dos nós vizinhos para remover o nó corretamente
         if current.prev:
             current.prev.next = current.next
         if current.next:
