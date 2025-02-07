@@ -7,7 +7,16 @@ This repository contains implementations of algorithms and data structures, orga
 - [Sorting]
   - [Insertion Sort]
   - [Heap Sort]
-- [Binary Search Trees]
-  - [Balanced Trees]
+
+- [Data Structures]
+  - [Linked Lists]
+    - [Singly Linked List]
+    - [Doubly Linked List]
+    - [Circular Singly Linked List]
+    - [Circular Doubly Linked List]
+  - [Stack]
+  - [Queue]
+  - [Binary Search Trees]
+    - [Balanced Trees]
 
 For detailed information about each category, navigate to the respective directory.
