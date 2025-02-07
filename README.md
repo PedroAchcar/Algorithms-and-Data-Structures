@@ -16,6 +16,7 @@ This repository contains implementations of algorithms and data structures, orga
     - Circular Doubly Linked List
   - Stack
   - Queue
+  - Deque
   - Binary Search Trees
     - Balanced Trees
 
