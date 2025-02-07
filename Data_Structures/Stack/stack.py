@@ -7,7 +7,7 @@ class Node:
 class Stack:
     def __init__(self):
         self.top = None
-        self._size = 0
+        self._lenght = 0
 
     def push(self, data):
         """Push a value into the top of the stack."""
@@ -15,7 +15,7 @@ class Stack:
         new_node = Node(data)
         new_node.next = self.top
         self.top = new_node
-        self._size += 1
+        self._lenght += 1
 
     def pop(self):
         """Remove and return a value in the top of the stack."""
@@ -26,7 +26,7 @@ class Stack:
         else:
             data = self.top.data
             self.top = self.top.next
-            self._size -= 1
+            self._lenght -= 1
             return data
 
     def peek(self):
@@ -43,16 +43,16 @@ class Stack:
 
         return self.top is None
 
-    def size(self):
+    def lenght(self):
         """Get the number of items in the stack."""
 
-        return self._size
+        return self._lenght
 
     def clear(self):
         """Clear the stack."""
 
         self.top = None
-        self._size = 0
+        self._lenght = 0
 
 
 if __name__ == "__main__":
@@ -76,14 +76,14 @@ if __name__ == "__main__":
     stack.peek()
     # Expected: 50
 
-    print("\n🔹 Test 4: Size of the stack")
-    print(stack.size())
+    print("\n🔹 Test 4: Lenght of the stack")
+    print(stack.lenght())
     # Expected: 4
 
     print("\n🔹 Test 5: Pop all elements")
     stack.clear()
     print(
-        f"Is stack empty? {stack.is_empty()}. Number of nodes: {stack.size()}")
+        f"Is stack empty? {stack.is_empty()}. Number of nodes: {stack.lenght()}")
     # Expected: Is stack empty? True. Number of nodes: 0
 
     print("\n🔹 Test 6: Pop from empty stack")
@@ -94,6 +94,6 @@ if __name__ == "__main__":
     stack.peek()
     # Expected: The stack is empty.
 
-    print("\n🔹 Test 8: Size of the stack")
-    print(stack.size())
+    print("\n🔹 Test 8: Lenght of the stack")
+    print(stack.lenght())
     # Expected: 0

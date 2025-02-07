@@ -8,7 +8,7 @@ This repository contains an implementation of a **Stack (LIFO - Last In, First O
 - Pop elements from the stack.
 - Peek at the top element without removing it.
 - Check if the stack is empty.
-- Check the size of the stack.
+- Check the lenght of the stack.
 - Clear the stack.
 
 ## Class Structure
@@ -27,6 +27,7 @@ Manages the stack operations.
 class Stack:
     def __init__(self):
         self.top = None
+        self._lenght = 0
 ```
 
 ### Methods
@@ -35,7 +36,7 @@ class Stack:
 - `pop()`: Removes and returns the top element from the stack.
 - `peek()`: Returns the top element without removing it.
 - `is_empty()`: Checks if the stack is empty.
-- `size()`: Returns the size of the stack.
+- `lenght()`: Returns the lenght of the stack.
 - `clear()`: Clear the stack.
 
 ## Usage and Test Cases
@@ -63,13 +64,13 @@ if __name__ == "__main__":
     print(stack.peek())
     # Expected: 50
 
-    print("\n🔹 Test 4: Size of the stack")
-    print(stack.size())
+    print("\n🔹 Test 4: Lenght of the stack")
+    print(stack.lenght())
     # Expected: 4
 
     print("\n🔹 Test 5: Pop all elements")
     stack.clear()
-    print(f"Is stack empty? {stack.is_empty()}. Number of nodes: {stack.size()}")
+    print(f"Is stack empty? {stack.is_empty()}. Number of nodes: {stack.lenght()}")
     # Expected: Is stack empty? True. Number of nodes: 0
 
     print("\n🔹 Test 6: Pop from empty stack")
@@ -80,8 +81,8 @@ if __name__ == "__main__":
     print(stack.peek())
     # Expected: The stack is empty.
 
-    print("\n🔹 Test 8: Size of the stack")
-    print(stack.size())
+    print("\n🔹 Test 8: Lenght of the stack")
+    print(stack.lenght())
     # Expected: 0
 ```
 
@@ -96,7 +97,7 @@ Popped element: 30
 🔹 Test 3: Push more elements and see the top of the stack
 50
 
-🔹 Test 4: Size of the stack
+🔹 Test 4: Lenght of the stack
 4
 
 🔹 Test 5: Pop all elements
@@ -109,6 +110,6 @@ None
 🔹 Test 7: Peek in an empty stack
 The stack is empty.
 
-🔹 Test 8: Size of the stack
+🔹 Test 8: Lenght of the stack
 0
 ```
