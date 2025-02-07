@@ -79,13 +79,11 @@ if __name__ == "__main__":
 
     print("\n🔹 Test 7: Search for an existing element (25)")
     found, position = cll.search(25)
-    print(
-        f"Element 25 {'found' if found else 'not found'} at position {position}")
+    print(f"Element 25 {'found' if found else 'not found'} at position {position}")
 
     print("\n🔹 Test 8: Search for a non-existing element (100)")
     found, position = cll.search(100)
-    print(
-        f"Element 100 {'found' if found else 'not found'} at position {position}")
+    print(f"Element 100 {'found' if found else 'not found'} at position {position}")
 
     print("\n🔹 Test 9: Number of nodes")
     print(cll.length())
@@ -100,8 +98,7 @@ if __name__ == "__main__":
 
     print("\n🔹 Test 11: Search in an empty list")
     found, position = cll.search(30)
-    print(
-        f"Element 30 {'found' if found else 'not found'} at position {position}")
+    print(f"Element 30 {'found' if found else 'not found'} at position {position}")
     # Expected: Element 30 not found at position -1
 ```
 
