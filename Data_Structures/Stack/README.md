@@ -50,7 +50,7 @@ if __name__ == "__main__":
     stack.push(10)
     stack.push(20)
     stack.push(30)
-    stack.peek()
+    print(stack.peek())
     # Expected: 30
 
     print("\n🔹 Test 2: Pop element from the stack")
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     print("\n🔹 Test 3: Push more elements and see the top of the stack")
     stack.push(40)
     stack.push(50)
-    stack.peek()
+    print(stack.peek())
     # Expected: 50
 
     print("\n🔹 Test 4: Size of the stack")
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     # Expected: The stack is empty. None
 
     print("\n🔹 Test 7: Peek in an empty stack")
-    stack.peek()
+    print(stack.peek())
     # Expected: The stack is empty.
 
     print("\n🔹 Test 8: Size of the stack")
