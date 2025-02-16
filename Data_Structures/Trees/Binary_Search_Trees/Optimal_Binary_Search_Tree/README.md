@@ -2,13 +2,6 @@
 
 This directory contains the implementation of Binary Search Trees, a data structure that organizes elements to allow efficient search operations.
 
----
-
-![Python](https://img.shields.io/badge/python-3.8-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-
----
-
 ## How OBST Works
 
 1. Each node in the tree contains a key, a left child, and a right child.
