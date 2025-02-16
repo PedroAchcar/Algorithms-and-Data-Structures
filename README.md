@@ -11,9 +11,8 @@ This repository contains implementations of algorithms and data structures, orga
 
 ## Repository Structure
 
-- Sorting
-  - Insertion Sort
-  - Heap Sort
+- Algorithms
+  - 
 
 - Data Structures
   - Linked Lists
@@ -24,7 +23,9 @@ This repository contains implementations of algorithms and data structures, orga
   - Stack
   - Queue
   - Deque
-  - Binary Search Trees
+  - Trees
+    - Binary Search Tree
+    - Optimal Binary Search Tree
     - Balanced Trees
 
 For detailed information about each category, navigate to the respective directory.
