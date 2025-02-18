@@ -1,4 +1,6 @@
 def right_rotation(p):
+    """Simple right rotation"""
+
     u = p.left
     p.left = u.right
     u.right = p
@@ -6,6 +8,8 @@ def right_rotation(p):
 
 
 def left_right_rotation(p):
+    """Double right rotation"""
+
     u = p.left
     v = u.right
     u.right = v.left
@@ -16,6 +20,8 @@ def left_right_rotation(p):
 
 
 def left_rotation(p):
+    """Simple left rotation"""
+
     u = p.right
     p.right = u.left
     u.left = p
@@ -23,6 +29,8 @@ def left_rotation(p):
 
 
 def right_left_rotation(p):
+    """Double left rotation"""
+
     u = p.right
     v = u.left
     u.left = v.right

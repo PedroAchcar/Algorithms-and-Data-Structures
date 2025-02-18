@@ -10,6 +10,8 @@ class BinarySearchTree:
         self.root = None
 
     def insert(self, value, node=None):
+        """Inserts a node into a binary tree."""
+
         if node is None:
             node = self.root
 
@@ -34,6 +36,8 @@ class BinarySearchTree:
         return self.root
 
     def search(self, value, node=None):
+        """Searches for a node in a binary tree."""
+
         if node is None:
             node = self.root
 
@@ -52,6 +56,8 @@ class BinarySearchTree:
         return False
 
     def remove(self, value, node=None, parent=None):
+        """Removes a node from a binary tree."""
+
         if node is None:
             node = self.root
 
@@ -118,6 +124,7 @@ class BinarySearchTree:
                 return self.remove(successor.val, node.left, node)
 
     def find_minimum(self, node=None):
+        """Finds the minimum node of a binary tree."""
 
         if node is None:
             node = self.root
@@ -133,6 +140,7 @@ class BinarySearchTree:
         return current
 
     def find_maximum(self, node=None):
+        """Finds the maximum node of a binary tree."""
 
         if node is None:
             node = self.root
@@ -148,6 +156,8 @@ class BinarySearchTree:
         return current
 
     def preorder_traversal(self, node=None):
+        """Traverses the tree in preorder traversal."""
+
         if node is None:
             node = self.root
 
@@ -164,6 +174,8 @@ class BinarySearchTree:
             self.preorder_traversal(node.right)
 
     def inorder_traversal(self, node=None):
+        """Traverses the tree in inorder traversal."""
+
         if node is None:
             node = self.root
 
@@ -180,6 +192,8 @@ class BinarySearchTree:
             self.inorder_traversal(node.right)
 
     def postorder_traversal(self, node=None):
+        """Traverses the tree in postorder traversal."""
+
         if node is None:
             node = self.root
 
