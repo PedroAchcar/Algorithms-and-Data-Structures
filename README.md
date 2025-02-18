@@ -11,8 +11,8 @@ This repository contains implementations of algorithms and data structures, orga
 
 ## Repository Structure
 
-- Algorithms
-  - 
+- Algorithms [WIP]
+  - Sorting Algorithms [WIP]
 
 - Data Structures
   - Linked Lists
@@ -24,8 +24,16 @@ This repository contains implementations of algorithms and data structures, orga
   - Queue
   - Deque
   - Trees
-    - Binary Search Tree
-    - Optimal Binary Search Tree
-    - Balanced Trees
+    - General Tree To Binary Tree
+    - Binary Tree To Binary Search Tree [WIP]
+    - Binary Search Trees
+      - Binary Search Tree
+      - Optimal Binary Search Tree
+      - Balanced Trees
+        - AVL Tree
+        - Ranked Tree [WIP]
+        - Red-Black Tree [WIP]
+    - Heap [WIP]
+  - Hash Table [WIP]
 
 For detailed information about each category, navigate to the respective directory.
