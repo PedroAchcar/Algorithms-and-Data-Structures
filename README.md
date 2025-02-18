@@ -35,6 +35,6 @@ This repository contains implementations of algorithms and data structures, orga
         - Red-Black Tree [WIP]
     - Heap [WIP]
   - Hash Table [WIP]
-  - Graphs
+  - Graphs [WIP]
 
 For detailed information about each category, navigate to the respective directory.
