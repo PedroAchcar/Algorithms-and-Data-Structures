@@ -14,8 +14,8 @@ Represents a node in both the general tree and the binary tree.
 class Node:
     def __init__(self, val):
         self.val = val
-        self.left = None  # First child in binary tree representation
-        self.right = None  # Next sibling in binary tree representation
+        self.left = None
+        self.right = None
         self.children = []  # List of children (only for general tree)
 ```
 
@@ -45,6 +45,8 @@ To use this implementation, define a general tree and convert it to a binary tre
 
 ```python
 if __name__ == "__main__":
+
+    from print_btree import print_btree
 
     root = Node('A')
     root.children.append(Node('B'))

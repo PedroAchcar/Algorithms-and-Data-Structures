@@ -1,6 +1,3 @@
-from print_btree import print_btree
-
-
 class Node:
     def __init__(self, val):
         self.val = val
@@ -30,6 +27,8 @@ def general_tree_to_binary_tree(root: Node) -> Node:
 
 
 if __name__ == "__main__":
+
+    from print_btree import print_btree
 
     root = Node('A')
     root.children.append(Node('B'))
